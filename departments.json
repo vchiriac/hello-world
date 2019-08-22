@@ -1,0 +1,76 @@
+{
+  "departments": [
+    {
+      "id": 10,
+      "name": "PDT Administration",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 20,
+      "name": "PDT Marketing",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 30,
+      "name": "Transportation",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 40,
+      "name": "Shipping",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 50,
+      "name": "Human Resources",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 60,
+      "name": "Operations",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 70,
+      "name": "Inventory",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 80,
+      "name": "Sales",
+      "managerId": 145,
+      "locationId": 2500
+    },
+    {
+      "id": 100,
+      "name": "Finance",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 110,
+      "name": "Documentation",
+      "managerId": null,
+      "locationId": null
+    },
+    {
+      "id": 130,
+      "name": "Billing",
+      "managerId": null,
+      "locationId": 1700
+    },
+    {
+      "id": 140,
+      "name": "Control And Credit",
+      "managerId": null,
+      "locationId": 1700
+    }
+  ]
+}

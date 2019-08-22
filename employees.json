@@ -1,0 +1,25 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Sebastian",
+      "last_name": "Eschweiler",
+      "age" : 30,
+      "email": "sebastian@codingthesmartway.com"
+    },
+    {
+      "id": 2,
+      "name": "Steve",
+      "last_name": "Palmer",
+      "age" : 20,
+      "email": "steve@codingthesmartway.com"
+    },
+    {
+      "id": 3,
+      "name": "Ann",
+      "last_name": "Smith",
+      "age" : 35,
+      "email": "ann@codingthesmartway.com"
+    }
+  ]
+} 

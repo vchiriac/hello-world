@@ -1,0 +1,26 @@
+<h3>List of employees</h3>
+<h4>{{errorMsg}}</h4>
+<div>
+  <ul class="items">
+    <li *ngFor="let employee of employees">
+      <a [class.selected]="isSelected(employee)" routerLink="{{employee.id}}">{{employee.name}}</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1" (change)="onSelectionChange($event)">Option 1</mat-radio-button>
+    <mat-radio-button value="2" (change)="onSelectionChange($event)">Option 2</mat-radio-button>
+  </mat-radio-group>
+</div>
+
+<form>
+  <mat-form-field>
+    <input matInput #foodInput placeholder="Favorite food" (change)="displayFood(foodInput.value)">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>

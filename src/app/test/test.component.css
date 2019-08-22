@@ -1,0 +1,12 @@
+div {
+  color: darkred;
+}
+.text-success {
+  color: lawngreen;
+}
+.text-danger {
+  color: red;
+}
+.text-special {
+  font-style: italic;
+}

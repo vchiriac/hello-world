@@ -1,0 +1,42 @@
+<p>login works!</p>
+<div>Login</div>
+<input [(ngModel)]="name" type="text">
+<div>{{name}}</div>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You picked red color</div>
+  <div *ngSwitchCase="'blue'">You picked blue color</div>
+  <div *ngSwitchCase="'green'">You picked green color</div>
+  <div *ngSwitchDefault>Pick again</div>
+</div>
+<div>Index:</div>
+<div *ngFor="let color of colors; index as i">
+  <h3>{{i}} - {{color}}</h3>
+</div>
+<div>First:</div>
+<div *ngFor="let color of colors; first as f">
+  <h3>{{f}} - {{color}}</h3>
+</div>
+<div>Even:</div>
+<div *ngFor="let color of colors; even as e">
+  <h3>{{e}} - {{color}}</h3>
+</div>
+<!--
+<div>
+  <h4>I got from app.component: {{parentData}}</h4>
+</div>
+-->
+<div>
+  <h4>I got also from app.component: {{data}}</h4>
+</div>
+<div>
+  <button (click)="fireEvent()">Emit event</button>
+</div>
+
+<h2>{{person.firstName}}</h2>
+<h2>{{5.324 | number:'1.2-3'}}</h2>
+<h2>{{5.324 | number:'2.4-5'}}</h2>
+<h2>{{0.25 | percent}}</h2>
+<h2>{{100 | currency: 'EUR'}}</h2>
+<h2>{{date}}</h2>
+<h2>{{date | date: 'short'}}</h2>
+<h2>{{date | date: 'dd/MM/yyyy'}}</h2>

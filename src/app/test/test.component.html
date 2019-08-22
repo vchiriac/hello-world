@@ -1,0 +1,25 @@
+<div>Welcome {{name}}</div>
+<h2 [class]="dangerClass">{{greetUser()}}</h2>
+<h2 *ngIf="displaySiteUrl; else elseBlock" class="text-success">{{siteUrl}}</h2>
+<h2 *ngIf="displayBlock; then thenBlock else hiddenBlock"></h2>
+<ng-template #thenBlock>
+  <h2 [class]="successClass">Displayed</h2>
+</ng-template>
+<ng-template #hiddenBlock>
+  <h2 [class]="dangerClass">Hidden</h2>
+</ng-template>
+<ng-template #elseBlock>
+  <h2>Url Site is hidden</h2>
+</ng-template>
+<h2 [ngClass] = "messageClass">Class Binding</h2>
+<h2 [style.color]="hasError ? 'red' : 'blue'">Style Binding</h2>
+<h2 [style.color]="highlightColor">Other Style Binding</h2>
+<h2 [ngStyle]="styleClass">ngStyle Binding</h2>
+<input [id] = "myId" type="text" value="one"/>
+<input [disabled] = "isDisabled" id = {{myId1}} type="text" value="two"/>
+<button (click)="onClick()">Greet</button>
+<h2>{{greeting}}</h2>
+<button (click)="onNewClick($event)">New Greet</button>
+<button (click)="greeting = 'Wow'">Other New Greet</button>
+<input #myInput type="text"/>
+<button (click)="logMessage(myInput.value)">Click on me</button>

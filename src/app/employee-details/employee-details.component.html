@@ -1,0 +1,43 @@
+<h3>Details of employees</h3>
+<h2>{{msgError}}</h2>
+<div>
+<h3>Selected employee:</h3>
+  <div *ngIf="employee">
+    <h1>{{employee.id}}</h1>
+    <ul>
+      <li><strong>First Name: </strong>{{employee.name}}</li>
+      <li><strong>Last Name: </strong>{{employee.last_name}}</li>
+      <li><strong>Email: </strong>{{employee.email}}</li>
+    </ul>
+  </div>
+</div>
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <label for="firstName">First Name: </label>
+    <input matInput id="firstName" [(ngModel)]="employee.name" [ngModelOptions]="{standalone: true}" type="text">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <label for="lastName">Last Name: </label>
+    <input matInput id="lastName" [(ngModel)]="employee.last_name" [ngModelOptions]="{standalone: true}" type="text">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <label for="email">Email: </label>
+    <input matInput id="email" [(ngModel)]="employee.email" [ngModelOptions]="{standalone: true}" type="text">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="update(employee)">Update</button>
+</form>
+<p></p>
+<div class="example-button-row">
+  <button mat-raised-button color="accent" (click)="showOverview()">Overview</button>
+  <button mat-raised-button color="accent" (click)="showContact()">Contact</button>
+</div>
+
+<router-outlet></router-outlet>
+<p></p>
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="goToEmployeeList()">Back</button>
+</div>
+<p></p>
+<a routerLink="/employees/{{previousId}}">Previous</a>
+<a routerLink="/employees/{{nextId}}">Next</a>
