@@ -54,7 +54,7 @@ import {
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
-    AgmCoreModule.forRoot({apiKey: 'AIzaSyD1xgP2sPtNyaYx4OfE8tOOFBHj2LxSoSE'})
+    AgmCoreModule.forRoot({apiKey: 'abcd'})
   ],
   providers: [EmployeeService, DepartmentService],
   bootstrap: [AppComponent]
