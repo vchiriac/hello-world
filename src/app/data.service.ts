@@ -9,8 +9,8 @@ import {IEmployee} from './employee';
 })
 export class DataService {
 
-  private employeeUrl: string = 'http://localhost:8080/helloworld/employees';
-  private departmentUrl: string = 'http://localhost:8080/helloworld/departments';
+  private employeeUrl = 'http://localhost:8080/helloworld/employees';
+  private departmentUrl = 'http://localhost:8080/helloworld/departments';
 
   constructor(private http: HttpClient) {
   }
@@ -40,6 +40,6 @@ export class DataService {
   postEmployee(employee: IEmployee) {
     return this.http.post(this.employeeUrl, employee).pipe(retry(1), catchError(error => {
       return throwError(error.message || 'Server Error');
-    }))
+    }));
   }
 }
